@@ -45,8 +45,8 @@ This checklist maps the official assignment document to the implementation and t
 
 ## Submission package
 
-- [ ] Push the completed source code to a GitHub repository.
+- [x] Push the completed source code to a GitHub repository.
 - [ ] Create the required Word document with testing and database screenshots.
-- [ ] Create a clean `.zip` containing source code only (no `node_modules`, `.next`, `.env`, or secrets).
-- [ ] Include the GitHub repository link with the submission.
+- [x] Create a clean `.zip` containing source code only (no `node_modules`, `.next`, `.env`, or secrets).
+- [x] Include the GitHub repository link with the submission.
 - [ ] Open and inspect the final ZIP before submitting.
