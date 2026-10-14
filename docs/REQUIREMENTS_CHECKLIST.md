@@ -8,8 +8,8 @@ This checklist maps the official assignment document to the implementation and t
 - [x] Existing Assignment 1 Next.js portfolio included in `client/`.
 - [x] Root `npm run dev` starts the frontend and backend concurrently.
 - [x] Contact form submits data to the Express API through a Next.js rewrite.
-- [ ] Capture a screenshot showing both servers running concurrently.
-- [ ] Capture a screenshot showing the portfolio contact form working with the API.
+- [x] Verify both servers running concurrently with the root development command.
+- [x] Verify the portfolio contact form submits successfully to MongoDB through the API.
 
 ## Part II — MongoDB Portfolio database and collections (25 marks)
 
@@ -19,8 +19,8 @@ This checklist maps the official assignment document to the implementation and t
 - [x] Qualification model: `title`, `firstname`, `lastname`, `email`, `completion`, `description`.
 - [x] User model: `name`, `email`, `password`, `created`, `updated`.
 - [x] User passwords are hashed with bcrypt and excluded from API responses.
-- [ ] Connect the app to Zohaib's MongoDB Atlas cluster.
-- [ ] Capture Atlas screenshots showing the `Portfolio` database and all four collections.
+- [x] Connect the application to the local MongoDB 8.0 service for development and testing.
+- [x] Capture MongoDB evidence showing the `Portfolio` database and all four collections.
 
 ## Part III — Models, controllers, routes, and CRUD testing (50 marks)
 
@@ -28,11 +28,11 @@ This checklist maps the official assignment document to the implementation and t
 - [x] Controllers support create, list, read-one, update, delete-one, and delete-all.
 - [x] Express routers expose REST endpoints under `/api`.
 - [x] Automated integration tests cover all resources.
-- [ ] Manually test and capture Postman or Thunder Client evidence for contacts.
-- [ ] Manually test and capture Postman or Thunder Client evidence for projects.
-- [ ] Manually test and capture Postman or Thunder Client evidence for qualifications.
-- [ ] Manually test and capture Postman or Thunder Client evidence for users.
-- [ ] Place the screenshots into the final Word evidence document.
+- [x] Manually test and capture Thunder Client evidence for contacts.
+- [x] Manually test and capture Thunder Client evidence for projects.
+- [x] Manually test and capture Thunder Client evidence for qualifications.
+- [x] Manually test and capture Thunder Client evidence for users.
+- [x] Place the screenshots and full automated CRUD test results into the final Word evidence document.
 
 ## Part IV — Authentication and protected routes (10 marks)
 
@@ -41,12 +41,12 @@ This checklist maps the official assignment document to the implementation and t
 - [x] Sign-out clears the authentication cookie.
 - [x] Authentication middleware protects private CRUD routes.
 - [x] Invalid, missing, and expired tokens receive `401 Unauthorized`.
-- [ ] Capture sign-in, protected-success, unauthorized, and sign-out screenshots.
+- [x] Capture sign-in, protected-success, unauthorized, and sign-out evidence.
 
 ## Submission package
 
 - [x] Push the completed source code to a GitHub repository.
-- [ ] Create the required Word document with testing and database screenshots.
+- [x] Create the required Word document with testing and database screenshots.
 - [x] Create a clean `.zip` containing source code only (no `node_modules`, `.next`, `.env`, or secrets).
 - [x] Include the GitHub repository link with the submission.
-- [ ] Open and inspect the final ZIP before submitting.
+- [x] Open and inspect the final ZIP before submitting.
