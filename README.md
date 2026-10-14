@@ -6,7 +6,7 @@ Zohaib Syed's Assignment 1 Next.js portfolio is paired with an Express and Mongo
 
 - Next.js and React frontend in `client/`
 - Node.js and Express REST API in `server/`
-- MongoDB Atlas with Mongoose models
+- MongoDB with Mongoose models (local MongoDB or Atlas)
 - JWT authentication and bcrypt password hashing
 - Node test runner, Supertest, and an in-memory MongoDB test database
 

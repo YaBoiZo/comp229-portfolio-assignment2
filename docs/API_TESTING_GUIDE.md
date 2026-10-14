@@ -1,16 +1,17 @@
 # API Testing Guide
 
-Use `http://localhost:5001` as the base URL. Create a user first, then sign in and copy the returned token. For protected requests, choose **Bearer Token** in Postman and paste that token.
+Use the terminal evidence runner to verify the required API routes without printing credentials or tokens.
 
-## Recommended screenshot order
+## Terminal evidence commands
 
-1. `POST /api/users` — create Zohaib's user.
-2. `POST /api/auth/signin` — show the returned JWT.
-3. `GET /api/auth/profile` without a token — show `401 Unauthorized`.
-4. `GET /api/auth/profile` with the token — show authenticated access.
-5. For each of contacts, projects, and qualifications, demonstrate POST, GET all, GET by ID, PUT, DELETE by ID, and DELETE all.
-6. For users, demonstrate GET all, GET by ID, PUT, and DELETE by ID.
-7. `POST /api/auth/signout` — show the successful sign-out response.
+1. `node scripts/api-evidence.mjs auth-users`
+2. `node scripts/api-evidence.mjs contacts-projects`
+3. `node scripts/api-evidence.mjs qualifications`
+4. `mongosh --quiet mongodb://127.0.0.1:27017/Portfolio`
+5. `npm run dev`
+6. `npm run verify`
+
+The evidence runner creates an isolated in-memory MongoDB database, executes the real Express routes, checks each HTTP response, and prints only the method, route, status code, and pass/fail result. The screenshots should contain only the VS Code terminal area.
 
 ## Example request bodies
 
@@ -60,4 +61,4 @@ Use `http://localhost:5001` as the base URL. Create a user first, then sign in a
 }
 ```
 
-Do not place a real password, JWT, MongoDB URI, or any other credential in the evidence document or screenshots.
+Do not place a real password, JWT, remote MongoDB URI, or any other credential in the evidence document or screenshots.

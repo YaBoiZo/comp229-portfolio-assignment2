@@ -13,6 +13,7 @@
     "dev:server": "nodemon server.js",
     "start": "node server.js",
     "test": "node --test --test-concurrency=1",
+    "evidence": "node scripts/api-evidence.mjs all",
     "verify": "npm test && npm --prefix client run lint && npm --prefix client run build"
   },
   "dependencies": {

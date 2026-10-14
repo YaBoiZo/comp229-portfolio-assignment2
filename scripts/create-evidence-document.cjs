@@ -30,22 +30,19 @@ const border = { style: BorderStyle.SINGLE, size: 1, color: "CBD5E1" };
 const borders = { top: border, bottom: border, left: border, right: border };
 
 const evidence = [
-  ["User Creation", "POST /api/users returns 201 Created. The password is accepted for registration but is not exposed in the response.", "01-user-create.png"],
-  ["JWT Sign-In", "POST /api/auth/signin validates the user and returns a signed JSON Web Token with the user profile.", "02-jwt-signin.png"],
-  ["Contacts Collection", "Authenticated GET /api/contacts returns the contact created during API testing.", "03-contacts-get-all.png"],
-  ["Projects Collection", "GET /api/projects returns the Custom AI Chatbot project and all required model fields.", "04-projects-get-all.png"],
-  ["Qualifications Collection", "GET /api/qualifications returns the Software Engineering Technology qualification and all required model fields.", "05-qualifications-get-all.png"],
-  ["JWT Sign-Out", "POST /api/auth/signout clears the authentication cookie and confirms a successful sign-out.", "06-jwt-signout.png"],
-  ["Protected Route Rejection", "GET /api/users without authentication returns 401 Unauthorized, demonstrating route protection.", "07-protected-route-unauthorized.png"],
-  ["MongoDB Portfolio Database", "The local MongoDB Portfolio database contains contacts, projects, qualifications, and users collections, with one test document in each.", "08-mongodb-portfolio-database.png"],
-  ["Automated Full CRUD Test Suite", "The integration suite verifies full CRUD and delete-all operations for contacts, projects, and qualifications; protected user CRUD; JWT sign-in; and unauthorized access. All eight tests pass.", "09-automated-crud-tests.png"],
+  ["Authentication and User Routes", "Terminal verification covers user creation, JWT sign-in, authenticated profile access, protected user CRUD, unauthorized access, sign-out, and user deletion.", "01-auth-users-terminal.png", 175],
+  ["Contact and Project CRUD", "Terminal verification covers POST, GET all, GET by ID, PUT, DELETE by ID, and DELETE all for contacts and projects.", "02-contacts-projects-terminal.png", 188],
+  ["Qualification CRUD", "Terminal verification covers POST, GET all, GET by ID, PUT, DELETE by ID, and DELETE all for qualifications.", "03-qualifications-terminal.png", 175],
+  ["MongoDB Portfolio Database", "The MongoDB shell confirms the Portfolio database contains contacts, projects, qualifications, and users collections, with a test document in each.", "04-mongodb-terminal.png", 135],
+  ["Concurrent Frontend and Backend Startup", "The VS Code terminal shows the Next.js client and Express server starting concurrently, the MongoDB connection, and both local application addresses.", "05-concurrent-startup-terminal.png", 269],
+  ["Final Automated Verification", "The final terminal run confirms eight API tests pass, frontend linting succeeds, TypeScript succeeds, and the production Next.js build completes.", "06-final-verification-terminal.png", 484],
 ];
 
 function pageBreak() {
   return new Paragraph({ children: [new PageBreak()] });
 }
 
-function evidencePage(title, description, filename, index) {
+function evidencePage(title, description, filename, imageHeight, index) {
   return [
     pageBreak(),
     new Paragraph({
@@ -61,7 +58,7 @@ function evidencePage(title, description, filename, index) {
       children: [new ImageRun({
         type: "png",
         data: fs.readFileSync(path.join(evidenceDirectory, filename)),
-        transformation: { width: 920, height: 531 },
+        transformation: { width: 920, height: imageHeight },
         altText: { title, description, name: filename },
       })],
     }),
@@ -133,11 +130,11 @@ const children = [
   }),
   new Paragraph({
     spacing: { before: 280 },
-    children: [new TextRun({ text: "Testing note: ", bold: true }), new TextRun("The screenshots use a local MongoDB 8.0 service and Thunder Client 2.41.3. The JWT and password shown are demonstration credentials created only for this local assignment database.")],
+    children: [new TextRun({ text: "Testing note: ", bold: true }), new TextRun("All screenshots show only the VS Code terminal. API evidence uses isolated test data and does not display passwords, JWT values, database credentials, or other secrets.")],
   }),
 ];
 
-evidence.forEach((item, index) => children.push(...evidencePage(item[0], item[1], item[2], index + 1)));
+evidence.forEach((item, index) => children.push(...evidencePage(item[0], item[1], item[2], item[3], index + 1)));
 
 const document = new Document({
   styles: {

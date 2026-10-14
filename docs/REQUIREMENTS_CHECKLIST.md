@@ -28,11 +28,11 @@ This checklist maps the official assignment document to the implementation and t
 - [x] Controllers support create, list, read-one, update, delete-one, and delete-all.
 - [x] Express routers expose REST endpoints under `/api`.
 - [x] Automated integration tests cover all resources.
-- [x] Manually test and capture Thunder Client evidence for contacts.
-- [x] Manually test and capture Thunder Client evidence for projects.
-- [x] Manually test and capture Thunder Client evidence for qualifications.
-- [x] Manually test and capture Thunder Client evidence for users.
-- [x] Place the screenshots and full automated CRUD test results into the final Word evidence document.
+- [x] Capture terminal evidence for every required contact CRUD route.
+- [x] Capture terminal evidence for every required project CRUD route.
+- [x] Capture terminal evidence for every required qualification CRUD route.
+- [x] Capture terminal evidence for user CRUD, JWT sign-in, JWT sign-out, and protected routes.
+- [x] Place the terminal screenshots and final automated verification results into the Word evidence document.
 
 ## Part IV — Authentication and protected routes (10 marks)
 
@@ -41,7 +41,7 @@ This checklist maps the official assignment document to the implementation and t
 - [x] Sign-out clears the authentication cookie.
 - [x] Authentication middleware protects private CRUD routes.
 - [x] Invalid, missing, and expired tokens receive `401 Unauthorized`.
-- [x] Capture sign-in, protected-success, unauthorized, and sign-out evidence.
+- [x] Capture sign-in, protected-success, unauthorized, and sign-out results in the terminal evidence.
 
 ## Submission package
 
