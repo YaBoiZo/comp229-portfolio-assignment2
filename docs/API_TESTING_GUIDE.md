@@ -1,6 +1,6 @@
 # API Testing Guide
 
-Use `http://localhost:5000` as the base URL. Create a user first, then sign in and copy the returned token. For protected requests, choose **Bearer Token** in Postman and paste that token.
+Use `http://localhost:5001` as the base URL. Create a user first, then sign in and copy the returned token. For protected requests, choose **Bearer Token** in Postman and paste that token.
 
 ## Recommended screenshot order
 

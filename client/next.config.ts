@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     root: process.cwd(),
   },
   async rewrites() {
-    const backendUrl = process.env.BACKEND_URL ?? "http://localhost:5000";
+    const backendUrl = process.env.BACKEND_URL ?? "http://127.0.0.1:5001";
 
     return [
       {

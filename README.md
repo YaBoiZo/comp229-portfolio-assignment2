@@ -16,7 +16,9 @@ Zohaib Syed's Assignment 1 Next.js portfolio is paired with an Express and Mongo
 2. Install frontend dependencies with `npm --prefix client install`.
 3. Copy `.env.example` to `.env` and supply your MongoDB Atlas URI and a strong JWT secret.
 4. Start both applications with `npm run dev`.
-5. Open the portfolio at `http://localhost:3000`; the API runs at `http://localhost:5000`.
+5. Open the portfolio at `http://localhost:3000`; the API runs at `http://localhost:5001`.
+
+Port 5001 is used because macOS AirPlay may reserve port 5000.
 
 Never commit `.env`. The repository includes only a safe placeholder in `.env.example`.
 
