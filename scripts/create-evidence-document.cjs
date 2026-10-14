@@ -30,10 +30,12 @@ const border = { style: BorderStyle.SINGLE, size: 1, color: "CBD5E1" };
 const borders = { top: border, bottom: border, left: border, right: border };
 
 const evidence = [
-  ["Authentication and User Routes", "Terminal verification covers user creation, JWT sign-in, authenticated profile access, protected user CRUD, unauthorized access, sign-out, and user deletion.", "01-auth-users-terminal.png", 175],
-  ["Contact and Project CRUD", "Terminal verification covers POST, GET all, GET by ID, PUT, DELETE by ID, and DELETE all for contacts and projects.", "02-contacts-projects-terminal.png", 188],
-  ["Qualification CRUD", "Terminal verification covers POST, GET all, GET by ID, PUT, DELETE by ID, and DELETE all for qualifications.", "03-qualifications-terminal.png", 175],
-  ["MongoDB Portfolio Database", "The MongoDB shell confirms the Portfolio database contains contacts, projects, qualifications, and users collections, with a test document in each.", "04-mongodb-terminal.png", 135],
+  ["Contact API Testing", "Detailed terminal evidence shows every required contact CRUD request, submitted JSON, HTTP status, and returned JSON response.", "01-contacts-detailed.png", 330],
+  ["Project API Testing", "Detailed terminal evidence shows every required project CRUD request, submitted JSON, HTTP status, and returned JSON response.", "02-projects-detailed.png", 330],
+  ["Qualification API Testing", "Detailed terminal evidence shows every required qualification CRUD request, submitted JSON, HTTP status, and returned JSON response.", "03-qualifications-detailed.png", 330],
+  ["User Routes and JWT Authentication", "Detailed terminal evidence shows user CRUD, sign-in, authenticated profile access, a rejected request without JWT, sign-out, and deletion. Password and token values are intentionally hidden.", "04-users-auth-detailed.png", 446],
+  ["MongoDB Portfolio Database", "The VS Code terminal confirms the Portfolio database, all four required collections, their required fields, and representative documents. The stored password is excluded from the evidence.", "05-mongodb-fields.png", 244],
+  ["Backend Welcome Message", "The browser displays the required root response from the running Express server at http://localhost:5001/.", "06-backend-browser.png", 217],
   ["Concurrent Frontend and Backend Startup", "The VS Code terminal shows the Next.js client and Express server starting concurrently, the MongoDB connection, and both local application addresses.", "05-concurrent-startup-terminal.png", 269],
   ["Final Automated Verification", "The final terminal run confirms eight API tests pass, frontend linting succeeds, TypeScript succeeds, and the production Next.js build completes.", "06-final-verification-terminal.png", 484],
 ];
@@ -130,7 +132,7 @@ const children = [
   }),
   new Paragraph({
     spacing: { before: 280 },
-    children: [new TextRun({ text: "Testing note: ", bold: true }), new TextRun("All screenshots show only the VS Code terminal. API evidence uses isolated test data and does not display passwords, JWT values, database credentials, or other secrets.")],
+    children: [new TextRun({ text: "Testing note: ", bold: true }), new TextRun("API and database screenshots are clean VS Code terminal captures; the backend welcome response is a tightly cropped browser capture as required by the assignment. Evidence uses isolated test data and does not display passwords, JWT values, database credentials, or other secrets.")],
   }),
 ];
 
