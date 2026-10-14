@@ -61,7 +61,7 @@ function evidencePage(title, description, filename, index) {
       children: [new ImageRun({
         type: "png",
         data: fs.readFileSync(path.join(evidenceDirectory, filename)),
-        transformation: { width: 920, height: 545 },
+        transformation: { width: 920, height: 531 },
         altText: { title, description, name: filename },
       })],
     }),
